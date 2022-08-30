@@ -21,4 +21,17 @@ function output() {
     console.log(result);
     document.getElementById("outputText").value = result;
   }
+  if (options == 3) {
+    let result = input.split(" ")[0].length;
+    console.log(result);
+    document.getElementById("outputText").value = result;
+  }
+  if (options == 4) {
+    let result = input.split(" ")[1].indexOf(input);
+    console.log(result);
+    document.getElementById("outputText").value = result;
+  } else {
+    console.log("error");
+    document.getElementById("outputText").value = "error";
+  }
 }
