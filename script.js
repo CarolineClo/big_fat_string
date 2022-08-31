@@ -27,11 +27,26 @@ function output() {
     document.getElementById("outputText").value = result;
   }
   if (options == 4) {
-    let result = input.split(" ")[1].indexOf(input);
-    console.log(result);
+    let start = input.indexOf(` `) + 1;
+    let end = input.lastIndexOf(` `) - 1;
+    let result = `${start} ${end} ${input.split(" ")[1]}`;
     document.getElementById("outputText").value = result;
-  } else {
-    console.log("error");
-    document.getElementById("outputText").value = "error";
+  } else if (options == 5) {
+    if (input.endsWith(`.jpg`)) {
+      result = "It's a .jpg";
+      document.getElementById("outputText").value = result;
+      console.log(result);
+    }
+    if (input.endsWith(`.png`)) {
+      result = "It's a .png";
+      document.getElementById("outputText").value = result;
+      console.log(result);
+    }
   }
+
+  // if (options ==7){
+  //   let result = input.substring(0,1).toUpperCase();
+  //   for (let i= 1; i <input.length;i++){previousChar= input[i -1]};
+
+  // }
 }
